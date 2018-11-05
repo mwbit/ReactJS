@@ -7,9 +7,17 @@ type Props = {
   str: string,
   num?: number,
   arr : Array<number>
-};
+}
 
-class Test extends Component<Props> {
+type TestState = {
+  message : string
+}
+
+class Test extends Component<Props, TestState> {
+
+  state = {
+    message : 'Welcome flow'
+  }
 
   static defaultProps = {
     str: 'Test Default'
@@ -21,6 +29,7 @@ class Test extends Component<Props> {
         <h1>{this.props.str}</h1>
         <h1>{this.props.num}</h1>
         <h1>{this.props.arr.map(val => val)}</h1>
+        <h1>{this.state.message}</h1>
       </div>
     )
   }
