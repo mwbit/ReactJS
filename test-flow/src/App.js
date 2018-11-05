@@ -5,6 +5,8 @@ import './App.css';
 
 type Props = {
   str: string,
+  num?: number,
+  arr : Array<number>
 };
 
 class Test extends Component<Props> {
@@ -12,6 +14,8 @@ class Test extends Component<Props> {
     return (
       <div>
         <h1>{this.props.str}</h1>
+        <h1>{this.props.num}</h1>
+        <h1>{this.props.arr.map(val => val)}</h1>
       </div>
     )
   }
@@ -21,7 +25,11 @@ class App extends Component<{}> {
   render() {
     return (
       <div className="App">
-        <Test str={'Testando Flow'} />
+        <Test
+          str={'Testando Flow'}
+          num = {1}
+          arr = {[1,2,3,4,5,6]}
+        />
       </div>
     )
   }
