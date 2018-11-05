@@ -10,6 +10,11 @@ type Props = {
 };
 
 class Test extends Component<Props> {
+
+  static defaultProps = {
+    str: 'Test Default'
+   }
+
   render() {
     return (
       <div>
