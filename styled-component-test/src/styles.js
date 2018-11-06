@@ -23,4 +23,9 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-export {Title, Wrapper, Button}
+const TomatoButton = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`;
+
+export {Title, Wrapper, Button, TomatoButton}
