@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SignupForm from './SignupForm';
 
 class App extends Component {
   render() {
     return (
       <div>
-          <h1>Recompose example1</h1>
+          <SignupForm/>
       </div>
     );
   }
