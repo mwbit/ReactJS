@@ -35,9 +35,6 @@ class Dashboard extends Component {
 
   render() {
     const { classes } = this.props;
-
-    console.log (classes)
-
     return (
       <div className={classes.root}>
         <CssBaseline />
