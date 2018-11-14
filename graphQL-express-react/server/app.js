@@ -3,10 +3,13 @@ const graphqlHTTP = require('express-graphql')
 const mongo = process.env.MONGODB || 'mongodb://localhost:27017/graphql-test'
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
+const cors = require('cors')
 
 const schema = require('./schema/schema')
 
 const app = express();
+
+app.use(cors())
 
 app.use('/graphql', graphqlHTTP({
     schema,
