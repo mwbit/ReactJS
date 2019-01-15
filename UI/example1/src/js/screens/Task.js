@@ -20,6 +20,7 @@ import {
 import { pageLoaded } from './utils';
 
 class Task extends Component {
+  
   componentDidMount() {
     const { match: { params }, dispatch } = this.props;
     pageLoaded('Task');
@@ -32,6 +33,7 @@ class Task extends Component {
   }
 
   render() {
+  
     const { error, task } = this.props;
 
     let errorNode;
