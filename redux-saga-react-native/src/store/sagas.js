@@ -12,10 +12,8 @@ function apiGet(text,length){
 function* asyncAddTodo(action) {
     try {
         const todos = yield select(state => state.todos)
-
         const response = yield call (apiGet, action.payload.text, todos.length)
         yield put({type: 'ADD_TODO', payload: {text: response } })
-            
     } catch (error) {
         yield put({type: 'ERROR'})
     }
