@@ -18,7 +18,7 @@ export default class SideBar extends Component {
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
-            animation="uncover"
+            animation="overlay"
             direction="left"
             icon="labeled"
             inverted
@@ -31,7 +31,7 @@ export default class SideBar extends Component {
             <Menu.Item as="a">Music</Menu.Item>
           </Sidebar>
           <Sidebar.Pusher dimmed={dimmed && visible}>
-            <Segment basic>
+            <Segment basic >
               <Header as="h1">Text h1</Header>
               <Header as="h2">Text h2</Header>
               <Header as="h3">Text h3</Header>
