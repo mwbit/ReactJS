@@ -11,27 +11,26 @@ export default class SideBar extends Component {
     console.log(visible);
     return (
       <div>
-        <Button.Group>
-          <Button onClick={() => this.handleClick(visible)}>sidebar</Button>
-        </Button.Group>
+        <div>
+          <Button.Group>
+            <Button onClick={() => this.handleClick(visible)}>sidebar</Button>
+          </Button.Group>
+        </div>
 
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
-            animation="overlay"
+            animation="push"
             direction="left"
             icon="labeled"
             inverted
             vertical
             visible={visible}
             width="thin"
-          >
-            <Menu.Item as="a">Home</Menu.Item>
-            <Menu.Item as="a">Films</Menu.Item>
-            <Menu.Item as="a">Music</Menu.Item>
-          </Sidebar>
+          />
+
           <Sidebar.Pusher dimmed={dimmed && visible}>
-            <Segment basic >
+            <Segment basic>
               <Header as="h1">Text h1</Header>
               <Header as="h2">Text h2</Header>
               <Header as="h3">Text h3</Header>
